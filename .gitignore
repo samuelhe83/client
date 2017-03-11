@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 node_modules
 bundle.js
 =======
+=======
+node_modules/
+>>>>>>> Refactor the chatbot, prep for testing
 .serverless/
 *.DS_Store
 *.zip
