@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Profile from './Profile.jsx'
 
-class App extends React.Component {
+
+class ProfilePic extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <div>
-        <Profile />
-      </div>
+      <img src={"images/userProfile.png"}/>
     );
   }
 }
 
-export default App;
+export default ProfilePic;
