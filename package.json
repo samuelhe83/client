@@ -1,0 +1,40 @@
+{
+  "name": "react-temp",
+  "version": "0.0.1",
+  "description": "This is a React Template",
+  "main": "./server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "start-watch": "node server/server.js & node_modules/webpack/bin/webpack.js --config webpack.config.js --progress --colors --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "react",
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "body-parser": "^1.15.2",
+    "chalk": "^1.1.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "webpack": "^1.14.0"
+  },
+  "devDependencies": {
+    "babel-preset-stage-3": "^6.17.0",
+    "nodemon": "^1.11.0",
+    "react-hot-loader": "^1.3.1",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0"
+  }
+}
