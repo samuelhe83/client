@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Profile from './Profile.jsx'
+
 import ResultPage from './ResultPage.jsx';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -10,6 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Profile />
         <ResultPage />
       </div>
     );
