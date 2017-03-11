@@ -7,3 +7,14 @@ provider:
 functions:
   hello:
     handler: handler.hello
+  webhook:
+    handler: handler.webhook
+    events:
+      - http:
+          path: webhook
+          method: GET
+          integration: lambda
+      - http:
+          path: webhook
+          method: POST
+          integration: lambda
