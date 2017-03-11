@@ -4,7 +4,7 @@ body {
 }
 
 /* line 5, ../sass/client.scss */
-img {
+.pic {
   width: 30%;
   max-height: 113px;
   border-radius: 100%;

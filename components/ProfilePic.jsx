@@ -9,7 +9,7 @@ class ProfilePic extends React.Component {
 
   render() {
     return (
-      <img src={"images/userProfile.png"}/>
+      <img className="pic" src={"images/userProfile.png"}/>
     );
   }
 }
