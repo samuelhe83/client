@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 
 node_modules
 bundle.js
+=======
+.serverless/
+*.DS_Store
+*.zip
+>>>>>>> Add gitignore
