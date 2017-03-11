@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 node_modules
 bundle.js
+=======
+node_modules/
+.serverless/
+*.DS_Store
+*.zip
+config/
+>>>>>>> profile componenets and styling setup
