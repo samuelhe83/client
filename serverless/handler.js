@@ -2,9 +2,13 @@
 
 const chatHandler = require('./chat/handler.js').handler;
 
-module.exports.hello = (event, context, callback) => {
+module.exports.index = (event, context, callback) => {
   const response = {
     statusCode: 200,
+    headers: {
+        "Access-Control-Allow-Origin" : "*",
+        "Access-Control-Allow-Credentials" : true
+    },
     body: JSON.stringify({
       message: 'Hello!',
       input: event,
@@ -20,5 +24,7 @@ module.exports.webhook = (event, context, callback) =>
 
 module.exports.run = (event, context) => {
   const time = new Date();
-  console.log(`Your cron function "${context.functionName}" ran at ${time}`);
+
+  console.log('Cron job running!');
+
 };
