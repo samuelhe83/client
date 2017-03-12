@@ -8,6 +8,12 @@ $red: #da3743;
   background: linear-gradient(to bottom, $white 0%, transparent 100%),
   linear-gradient(to top, #ddd 0%, transparent 100%);
 }
+button[type="submit"]{
+  background: $red;
+  color: $white;
+  border: 1px solid $red;
+  float: right;
+}
 // Global
 body{
   background: #F7F7F7;
@@ -75,7 +81,19 @@ li {
     border: 1px solid $lightGrey;
   }
 }
-
+.boxes{
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    border: 1px solid #ddd;
+    height: 97%;
+    right: 0px;
+    bottom: 1px;
+    padding: 0 49%;
+    margin: 10px 0;
+  }
+}
 .options{
   @include background();
   display: inline-block;
