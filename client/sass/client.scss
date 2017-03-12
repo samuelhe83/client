@@ -85,6 +85,11 @@ li {
   padding: 20px 10px;
   margin: 0 10px 20px 10px;
   color: $red;
+  &.active{
+    background: $red;
+    color: $white;
+    border-color: $red;
+  }
 }
 
 // restaurant list view
