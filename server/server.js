@@ -47,35 +47,89 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/styles.css'));
+
+app.get('/api/restaurants', (req, res) => {
+  var restaurants = [
+    {
+      name: 'Town',
+      seats: 12
+    },
+    {
+      name: 'Madera - Rosewood',
+      seats: 8
+    },
+    {
+      name: 'Evvia',
+      seats: 4
+    },
+    {
+      name: 'Il Fornanio',
+      seats: 11
+    },
+    {
+      name: 'Chieftan',
+      seats: 10
+    },
+    {
+      name: 'Sam\'s Chowder House',
+      seats: 3
+    },
+    {
+      name: 'The Village Pub',
+      seats: 7
+    },
+    {
+      name: 'Scratch',
+      seats: 6
+    },
+    {
+      name: 'Reposado Restaurant',
+      seats: 8
+    },
+    {
+      name: 'Benihana',
+      seats: 11
+    },
+  ];
+  console.log(restaurants);
+  res.status(200).send(restaurants);
+  //get the parameters from req
+    //Restrictions -- send to kai
+    //location --
+    //seats --
+      //Need to get RIDs before call to openTable
+  //send a request to opentable API with parameters
+    //location --
+    //radius --
+    //RID
+  //send result to efe
 });
 
-app.post('/restaurants', (req, res) => {
-  const response = {
-    "restaurants": [
-               {
-                 "title": "Emerald Curry"
-               },
-               {
-                 "title": "Panang King"
-               },
-               {
-                 "title": "Chicken Master"
-               },
-               {
-                 "title": "Silver Meal"
-               },
-               {
-                 "title": "Hooters"
-               },
-               {
-                 "title": "Portos"
-               }
-    ]
-  }
-  res.status(200).send(response);
-});
+// app.post('/restaurants', (req, res) => {
+//   const response = {
+//     "restaurants": [
+//                {
+//                  "title": "Emerald Curry"
+//                },
+//                {
+//                  "title": "Panang King"
+//                },
+//                {
+//                  "title": "Chicken Master"
+//                },
+//                {
+//                  "title": "Silver Meal"
+//                },
+//                {
+//                  "title": "Hooters"
+//                },
+//                {
+//                  "title": "Portos"
+//                }
+//     ]
+//   }
+//   res.status(200).send(response);
+// });
 
 // Nutritionix API Call
 app.post('/nutri', (req, res) => {
