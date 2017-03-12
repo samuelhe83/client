@@ -1,12 +1,15 @@
 service: open-chair
-
 provider:
   name: aws
   runtime: nodejs4.3
-
 functions:
-  hello:
-    handler: handler.hello
+  index:
+    handler: handler.index
+    events:
+      - http:
+          path: /
+          method: GET
+          cors: true
   webhook:
     handler: handler.webhook
     events:
