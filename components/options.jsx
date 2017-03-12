@@ -49,7 +49,7 @@ class Options extends React.Component {
       currentRestrictions.splice(index, 1);
       this.setState({restrictions: currentRestrictions});
       e.target.className = "options";
-      
+
     }
   }
 
@@ -73,22 +73,26 @@ class Options extends React.Component {
 
   getCurrentLocation(e) {
     e.preventDefault();
+    // this.state.location =
+    // var location = new Promise(function(resolve, reject) {
+    //   if (!navigator.geolocation) {
+    //     reject(new Error('Not Supported'));
+    //   }
 
-    var location = new Promise(function(resolve, reject) {
-      if (!navigator.geolocation) {
-        reject(new Error('Not Supported'));
-      }
+    //   navigator.geolocation.getCurrentPosition(function(pos) {
+    //     resolve(pos);
+    //   }, function(err) {
+    //     reject(new Error('Permission Denied'));
+    //   });
+    // });
 
-      navigator.getlocation.getCurrentPosition(function(pos) {
-        resolve(pos);
-      }, function(err) {
-        reject(new Error('Permission Denied'));
-      });
-    });
-    navigator.getlocation.getCurrentPosition(function(pos) {
+    // location.then(function(pos) {
+    //   this.state.location = pos.coords;
+    //   return;
+    // }.bind(this)).catch(function(err) {
+    //   console.log(err);
+    // });
 
-    });
-    this.state.location = location;
   }
 
   render() {
@@ -104,6 +108,7 @@ class Options extends React.Component {
           <div onClick={this.handleRestrictionChange} name="vegan" className="options">Vegan</div>
           <div onClick={this.handleRestrictionChange} name="vegetarian" className="options">Vegetarian</div>
           <div onClick={this.handleRestrictionChange} name="paleolithic" className="options">Paleo</div>
+
           <button type="submit" name="restaurants">Search</button>
         </form>
       </div>
