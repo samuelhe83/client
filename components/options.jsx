@@ -7,22 +7,15 @@ class Options extends React.Component {
       restrictions: [],
       newRestriction: '',
       location: '',
-      checked: false
+      checked: false,
+      locationStr: ''
     };
-    // this.handleRestaurantSubmit = this.handleRestaurantSubmit.bind(this);
     this.handleNewRestriction = this.handleNewRestriction.bind(this);
     this.handleRestrictionChange = this.handleRestrictionChange.bind(this);
     this.handleRestrictionSubmit = this.handleRestrictionSubmit.bind(this);
     this.configSubmitter = this.configSubmitter.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.getCurrentLocation = this.getCurrentLocation.bind(this);
-  }
-
-  handleNewRestriction(e) {
-    e.preventDefault();
-    var newRestriction = e.target.value;
-    this.setState({newRestriction: newRestriction});
-
   }
 
   handleRestrictionSubmit(e) {
@@ -73,25 +66,25 @@ class Options extends React.Component {
 
   getCurrentLocation(e) {
     e.preventDefault();
-    // this.state.location =
-    // var location = new Promise(function(resolve, reject) {
-    //   if (!navigator.geolocation) {
-    //     reject(new Error('Not Supported'));
-    //   }
+    // this.setState({locationStr: '37.782287, -122.3913078'});
+    var location = new Promise(function(resolve, reject) {
+      if (!navigator.geolocation) {
+        reject(new Error('Not Supported'));
+      }
 
-    //   navigator.geolocation.getCurrentPosition(function(pos) {
-    //     resolve(pos);
-    //   }, function(err) {
-    //     reject(new Error('Permission Denied'));
-    //   });
-    // });
+      navigator.geolocation.getCurrentPosition(function(pos) {
+        resolve(pos);
+      }, function(err) {
+        reject(new Error('Permission Denied'));
+      });
+    });
 
-    // location.then(function(pos) {
-    //   this.state.location = pos.coords;
-    //   return;
-    // }.bind(this)).catch(function(err) {
-    //   console.log(err);
-    // });
+    location.then(function(pos) {
+      this.setState({location: pos.coords, locationStr: pos.coords.latitude.toString() + ', ' + pos.coords.longitude.toString()});
+      return;
+    }.bind(this)).catch(function(err) {
+      console.log(err);
+    });
 
   }
 
@@ -101,7 +94,7 @@ class Options extends React.Component {
       <div className="options-wrapper">
         <form onSubmit={this.configSubmitter}>
           <div className="location-wrapper">
-            <input type="text" placeholder="Location" onChange={this.handleLocationChange}/>
+            <input type="text" placeholder="Location" onChange={this.handleLocationChange} value={this.state.locationStr}/>
             <button onClick={this.getCurrentLocation}>Set Current Location</button>
           </div>
           <div onClick={this.handleRestrictionChange} name="keto" className="options">Keto</div>
