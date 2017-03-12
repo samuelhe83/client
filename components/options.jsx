@@ -48,6 +48,7 @@ class Options extends React.Component {
   }
 
   configSubmitter (e) {
+    e.preventDefault();
     var config = {
       restrictions: this.state.restrictions,
       location: this.state.location
@@ -71,11 +72,14 @@ class Options extends React.Component {
           </form>
         </div>
         <form>
-          <div> <input type="text" placeholder="Location" onChange={this.handleLocationChange}/> </div>
-          <div><input type="checkbox" onClick={this.handleRestrictionChange} name="dairy-free"/> Dairy Free </div>
+          <div>
+            <input type="text" placeholder="Location" onChange={this.handleLocationChange}/>
+            <button onClick></button>
+          </div>
+          <div><input type="checkbox" onClick={this.handleRestrictionChange} name="keto"/> Keto </div>
           <div> <input type="checkbox" onClick={this.handleRestrictionChange} name="vegan"/> Vegan </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="vegetarian"/> Vegetarian </div>
-          <div><input type="checkbox" onClick={this.handleRestrictionChange} name="paleolithic"/> Paleolithic </div>
+          <div><input type="checkbox" onClick={this.handleRestrictionChange} name="paleolithic"/> Paleo </div>
           <button onClick={this.configSubmitter} type="submit" name="restaurants">Search Restaurants</button>
         </form>
       </div>
