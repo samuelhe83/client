@@ -12,6 +12,13 @@ li {
     font-style: italic;
 }
 // profile
+.wrapper {
+    position: relative;
+    background: #fff;
+    text-align: center;
+    
+}
+
 .background{
   position: absolute;
   top: 0;
@@ -29,8 +36,7 @@ li {
 }
 .profile{
   background: url("../images/bg.jpeg");
-  position: relative; 
-  padding: 59px 0;
+  position: relative;
 }
 .info{
   color: $white;
@@ -83,7 +89,12 @@ li {
   }
   // profile
   .profile{
-    padding: 100px 0;
+    padding: 50px 0;
+  }
+  .location-wrapper {
+  }
+  .wrapper{
+    top: 100px;
   }
   .info{
     margin-top: 0;
@@ -115,24 +126,5 @@ li {
   }
 
 }
-
-body{
-  background: #F7F7F7;
+@media all and (max-width: 480px) {
 }
-
-.pic{
-  width: 30%;
-  max-height: 113px;
-  border-radius: 100%;
-}
-
-.info{
-  float: right;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
-  box-shadow: 0 1px 0 rgba(0,0,0,.1);
-  background: #fff;
-  margin-bottom: 2rem;
-
-}
-

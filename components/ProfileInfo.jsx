@@ -10,11 +10,13 @@ class ProfileInfo extends React.Component {
   render() {
     return (
       <div className="info">
-        <div className="name">Cindy Cheung</div>
-        <div className="points">Your points: 10000000000 PTS</div>
+       
       </div>
     );
   }
 }
 
 export default ProfileInfo;
+
+ // <div className="name">Cindy Cheung</div>
+        // <div className="points">Your points: 10000000000 PTS</div>
