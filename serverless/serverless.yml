@@ -21,11 +21,7 @@ functions:
           path: webhook
           method: POST
           integration: lambda
-  cron:
-    handler: handler.run
-    events:
-      - schedule: rate(1 minute)
-resources:  
+resources:
   Resources:
     DynamoDbTable:
       Type: AWS::DynamoDB::Table
@@ -55,3 +51,9 @@ resources:
               Resource: arn:aws:dynamodb:*:*:table/my-table
         Roles:
           - Ref: IamRoleLambdaExecution
+
+  # cron:
+  #   handler: handler.run
+  #   events:
+  #     - schedule: rate(1 minute)
+
