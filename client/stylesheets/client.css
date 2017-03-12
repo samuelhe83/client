@@ -44,34 +44,34 @@ li {
   margin-top: 2%;
 }
 
-/* line 42, ../sass/client.scss */
+/* line 43, ../sass/client.scss */
 .name {
   font-size: 34px;
 }
 
-/* line 45, ../sass/client.scss */
+/* line 46, ../sass/client.scss */
 .points {
   font-size: 14px;
 }
 
-/* line 50, ../sass/client.scss */
+/* line 51, ../sass/client.scss */
 .RestaurantAvatar {
   float: left;
   padding-right: 5px;
 }
 
-/* line 55, ../sass/client.scss */
+/* line 56, ../sass/client.scss */
 .RestaurantInfo {
   float: left;
 }
 
-/* line 59, ../sass/client.scss */
+/* line 60, ../sass/client.scss */
 .ResultOption {
   overflow: hidden;
   margin-bottom: 10px;
 }
 
-/* line 65, ../sass/client.scss */
+/* line 66, ../sass/client.scss */
 .RestaurantTags li {
   display: inline-block;
   border-radius: 100%;
@@ -82,71 +82,71 @@ li {
 }
 
 @media all and (max-width: 960px) {
-  /* line 77, ../sass/client.scss */
+  /* line 78, ../sass/client.scss */
   #header {
     padding: 10px 0;
   }
-  /* line 79, ../sass/client.scss */
+  /* line 80, ../sass/client.scss */
   #header img {
     width: 40%;
   }
 
-  /* line 84, ../sass/client.scss */
+  /* line 85, ../sass/client.scss */
   .profile {
     padding: 100px 0;
   }
 
-  /* line 87, ../sass/client.scss */
+  /* line 88, ../sass/client.scss */
   .info {
     margin-top: 0;
     display: block;
   }
 
-  /* line 92, ../sass/client.scss */
+  /* line 93, ../sass/client.scss */
   .ResultOption {
     overflow: hidden;
   }
 
-  /* line 96, ../sass/client.scss */
+  /* line 97, ../sass/client.scss */
   .RestaurantAvatar {
     float: left;
     padding-right: 5px;
   }
-  /* line 99, ../sass/client.scss */
+  /* line 100, ../sass/client.scss */
   .RestaurantAvatar img {
     display: inline-block;
     width: 150px;
   }
 
-  /* line 104, ../sass/client.scss */
+  /* line 105, ../sass/client.scss */
   .RestaurantInfo {
     display: inline-block;
     width: 50%;
   }
 
-  /* line 108, ../sass/client.scss */
+  /* line 109, ../sass/client.scss */
   .restaurant {
     padding-bottom: 5px;
     font-size: 14px;
   }
-  /* line 111, ../sass/client.scss */
+  /* line 112, ../sass/client.scss */
   .restaurant.RestaurantName {
     font-size: 16px;
   }
 }
-/* line 118, ../sass/client.scss */
+/* line 119, ../sass/client.scss */
 body {
   background: #F7F7F7;
 }
 
-/* line 122, ../sass/client.scss */
-img {
+/* line 123, ../sass/client.scss */
+.pic {
   width: 30%;
   max-height: 113px;
   border-radius: 100%;
 }
 
-/* line 128, ../sass/client.scss */
+/* line 129, ../sass/client.scss */
 .info {
   float: right;
   border-radius: 5px;
