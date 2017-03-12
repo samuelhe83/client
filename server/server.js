@@ -73,6 +73,7 @@ app.post('/restaurants', (req, res) => {
   res.status(200).send(response);
 });
 
+// Nutritionix API Call
 app.post('/nutri', (req, res) => {
   let config = {
     headers: {
@@ -93,29 +94,6 @@ app.post('/nutri', (req, res) => {
   .catch(function (error) {
     console.log(error);
   });
-});
-
-app.post('/restaurants', (req, res) => {
-  const response = {
-    "items": [
-               {
-                 "title": "Emerald Curry",
-                 "description": "prawns, scallops, basil, green beans, bell pepper and young coconut in spicy green curry",
-                 "price": "20.00"
-               },
-               {
-                 "title": "Madame Sea Princess",
-                 "description": "simmered in green curry with green beans, bell pepper, fresh basil and eggplant",
-                 "price": "19.00"
-               },
-               {
-                 "title": "Panang Beast",
-                 "description": "grilled salmon with broccoli, topped with white sesame seeds and Panang curry sauce",
-                 "price": "16.00"
-               }
-    ]
-  }
-  res.status(200).send(response);
 });
 
 // const chatHandler = require('./chat/handler.js').handler;
