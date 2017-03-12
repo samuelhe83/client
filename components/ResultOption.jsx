@@ -12,20 +12,20 @@ class ResultOption extends React.Component {
           <img src="./fakeRestaurant.jpg"></img>
         </div>
         <div className="RestaurantInfo">
-          <div className="RestaurantName">
+          <div className="RestaurantName restaurant">
             {this.props.value.name}
           </div>
 
           <div className="RestaurantHours">
-            <div className="RestaurantOpen">
+            <div className="RestaurantOpen restaurant">
               Open: {this.props.value.hours[0]}
             </div>
-            <div className="RestaurantClose">
+            <div className="RestaurantClose restaurant">
               Close: {this.props.value.hours[1]}
             </div>
           </div>
 
-          <div className="RestaurantRating">
+          <div className="RestaurantRating restaurant">
             {this.props.value.rating}
           </div>
 

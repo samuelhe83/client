@@ -11,7 +11,6 @@ class ProfileInfo extends React.Component {
     return (
       <div className="info">
         <div className="name">Cindy Cheung</div>
-        <div className="points">Points</div>
         <div className="points">Your points: 10000000000 PTS</div>
       </div>
     );
