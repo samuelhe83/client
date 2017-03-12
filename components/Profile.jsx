@@ -12,11 +12,10 @@ class Profile extends React.Component {
   render() {
     return (
       <div className="profile">
-        <div className="background">
-          <ProfilePic/>
-          <ProfileInfo/>
+        
+          
           <Options navigateToResults={this.props.navigateToResults}/>
-        </div>
+        
       </div>
     );
   }
