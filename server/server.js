@@ -1,11 +1,13 @@
 'use strict';
 
-
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const chalk = require('chalk');
+
+const axios = require('axios');
+const API = require('./env/index.js');
 
 const app = express();
 const PORT = 8080;
@@ -45,7 +47,55 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
-app.get('/test', (req, res) => {
+app.post('/restaurants', (req, res) => {
+  const response = {
+    "restaurants": [
+               {
+                 "title": "Emerald Curry"
+               },
+               {
+                 "title": "Panang King"
+               },
+               {
+                 "title": "Chicken Master"
+               },
+               {
+                 "title": "Silver Meal"
+               },
+               {
+                 "title": "Hooters"
+               },
+               {
+                 "title": "Portos"
+               }
+    ]
+  }
+  res.status(200).send(response);
+});
+
+app.post('/nutri', (req, res) => {
+  let config = {
+    headers: {
+      'Content-Type': 'application/json',
+      'x-app-id': API.app_id,
+      'x-app-key': API.api_key
+    }
+  };
+
+  axios.post("https://trackapi.nutritionix.com/v2/natural/nutrients", {
+    "query": req.body.query,
+    "timezone": "US/Eastern"
+  }, config)
+  .then(function (response) {
+    // console.log(response.data);
+    res.send(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+});
+
+app.post('/restaurants', (req, res) => {
   const response = {
     "items": [
                {
@@ -54,12 +104,12 @@ app.get('/test', (req, res) => {
                  "price": "20.00"
                },
                {
-                 "title": "Madame Sea Bass",
+                 "title": "Madame Sea Princess",
                  "description": "simmered in green curry with green beans, bell pepper, fresh basil and eggplant",
                  "price": "19.00"
                },
                {
-                 "title": "Panang Salmon",
+                 "title": "Panang Beast",
                  "description": "grilled salmon with broccoli, topped with white sesame seeds and Panang curry sauce",
                  "price": "16.00"
                }
