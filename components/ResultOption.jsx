@@ -25,6 +25,7 @@ class ResultOption extends React.Component {
             </div>
           </div>
 
+
           <div className="RestaurantRating restaurant">
             {this.props.value.rating}
           </div>

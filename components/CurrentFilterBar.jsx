@@ -8,6 +8,7 @@ class CurrentFilterBar extends React.Component {
   render() {
     return (
       <div className="CurrentFilterBar">
+        <button onClick={this.props.navigateToProfile}>Back</button>
         This shows the current settings
       </div>
     )

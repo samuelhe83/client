@@ -10,7 +10,7 @@ class ResultPage extends React.Component {
   render() {
     return (
       <div>
-        <CurrentFilterBar />
+        <CurrentFilterBar navigateToProfile={this.props.navigateToProfile}/>
         <ResultContainer />
       </div>
     )

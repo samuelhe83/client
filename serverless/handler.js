@@ -1,8 +1,14 @@
 'use strict';
 
-module.exports.hello = (event, context, callback) => {
+const chatHandler = require('./chat/handler.js').handler;
+
+module.exports.index = (event, context, callback) => {
   const response = {
     statusCode: 200,
+    headers: {
+        "Access-Control-Allow-Origin" : "*",
+        "Access-Control-Allow-Credentials" : true
+    },
     body: JSON.stringify({
       message: 'Hello!',
       input: event,
@@ -10,7 +16,15 @@ module.exports.hello = (event, context, callback) => {
   };
 
   callback(null, response);
+};
 
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
+module.exports.webhook = (event, context, callback) =>
+  chatHandler(event, context, callback)
+
+
+module.exports.run = (event, context) => {
+  const time = new Date();
+
+  console.log('Cron job running!');
+
 };
