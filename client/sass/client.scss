@@ -29,17 +29,15 @@ li {
 .profile{
   background: url("../images/bg.jpeg");
   position: relative; 
-  padding: 100px 0;
+  padding: 59px 0;
 }
 .info{
   color: $white;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2%;
 }
-#header{
-  padding: 10px 0;
-  img{
-    width: 40%;
-  }
-}
+
 .name{
   font-size: 34px;
 }
@@ -47,29 +45,20 @@ li {
   font-size: 14px;
 }
 
-// restaurant result page
-.ResultOption{
-  overflow: hidden;
-}
+// restaurant list view
 .RestaurantAvatar{
   float: left;
-  width: 50%;
-  img{
-    display: inline-block;
-    width: 150px;
-  }
+  padding-right: 5px;
 }
+
 .RestaurantInfo {
-  display: inline-block;
-  width: 50%;
+  float: left;
 }
-.restaurant{
-  padding-bottom: 5px;
-  font-size: 14px;
-  &.RestaurantName{
-    font-size: 16px;
-  }
+
+.ResultOption {
+  overflow: hidden;
 }
+
 .RestaurantTags{
   li{
     display: inline-block;
@@ -80,3 +69,46 @@ li {
     margin-right: 5px;
   }
 }
+@media all and (max-width: 960px) {
+  // header
+  #header{
+    padding: 10px 0;
+    img{
+      width: 40%;
+    }
+  }
+  // profile
+  .profile{
+    padding: 100px 0;
+  }
+  .info{
+    margin-top: 0;
+    display: block;
+  }
+  // restaurant result page
+  .ResultOption{
+    overflow: hidden;
+  }
+
+  .RestaurantAvatar{
+  float: left;
+  padding-right: 5px;
+    img{
+      display: inline-block;
+      width: 150px;
+    }
+  }
+  .RestaurantInfo {
+    display: inline-block;
+    width: 50%;
+  }
+  .restaurant{
+    padding-bottom: 5px;
+    font-size: 14px;
+    &.RestaurantName{
+      font-size: 16px;
+    }
+  }
+
+}
+

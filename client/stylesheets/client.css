@@ -33,66 +33,44 @@ li {
 .profile {
   background: url("../images/bg.jpeg");
   position: relative;
-  padding: 100px 0;
+  padding: 59px 0;
 }
 
 /* line 34, ../sass/client.scss */
 .info {
   color: white;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2%;
 }
 
-/* line 37, ../sass/client.scss */
-#header {
-  padding: 10px 0;
-}
-/* line 39, ../sass/client.scss */
-#header img {
-  width: 40%;
-}
-
-/* line 43, ../sass/client.scss */
+/* line 41, ../sass/client.scss */
 .name {
   font-size: 34px;
 }
 
-/* line 46, ../sass/client.scss */
+/* line 44, ../sass/client.scss */
 .points {
   font-size: 14px;
 }
 
-/* line 51, ../sass/client.scss */
+/* line 49, ../sass/client.scss */
+.RestaurantAvatar {
+  float: left;
+  padding-right: 5px;
+}
+
+/* line 54, ../sass/client.scss */
+.RestaurantInfo {
+  float: left;
+}
+
+/* line 58, ../sass/client.scss */
 .ResultOption {
   overflow: hidden;
 }
 
-/* line 54, ../sass/client.scss */
-.RestaurantAvatar {
-  float: left;
-  width: 50%;
-}
-/* line 57, ../sass/client.scss */
-.RestaurantAvatar img {
-  display: inline-block;
-  width: 150px;
-}
-
-/* line 62, ../sass/client.scss */
-.RestaurantInfo {
-  display: inline-block;
-  width: 50%;
-}
-
-/* line 66, ../sass/client.scss */
-.restaurant {
-  padding-bottom: 5px;
-  font-size: 14px;
-}
-/* line 69, ../sass/client.scss */
-.restaurant.RestaurantName {
-  font-size: 16px;
-}
-
-/* line 74, ../sass/client.scss */
+/* line 63, ../sass/client.scss */
 .RestaurantTags li {
   display: inline-block;
   border-radius: 100%;
@@ -100,4 +78,58 @@ li {
   font-size: 13px;
   padding: 3px;
   margin-right: 5px;
+}
+
+@media all and (max-width: 960px) {
+  /* line 74, ../sass/client.scss */
+  #header {
+    padding: 10px 0;
+  }
+  /* line 76, ../sass/client.scss */
+  #header img {
+    width: 40%;
+  }
+
+  /* line 81, ../sass/client.scss */
+  .profile {
+    padding: 100px 0;
+  }
+
+  /* line 84, ../sass/client.scss */
+  .info {
+    margin-top: 0;
+    display: block;
+  }
+
+  /* line 89, ../sass/client.scss */
+  .ResultOption {
+    overflow: hidden;
+  }
+
+  /* line 93, ../sass/client.scss */
+  .RestaurantAvatar {
+    float: left;
+    padding-right: 5px;
+  }
+  /* line 96, ../sass/client.scss */
+  .RestaurantAvatar img {
+    display: inline-block;
+    width: 150px;
+  }
+
+  /* line 101, ../sass/client.scss */
+  .RestaurantInfo {
+    display: inline-block;
+    width: 50%;
+  }
+
+  /* line 105, ../sass/client.scss */
+  .restaurant {
+    padding-bottom: 5px;
+    font-size: 14px;
+  }
+  /* line 108, ../sass/client.scss */
+  .restaurant.RestaurantName {
+    font-size: 16px;
+  }
 }
