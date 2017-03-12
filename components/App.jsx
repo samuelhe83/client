@@ -9,17 +9,28 @@ import Options from './Options.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      current: 'Profile'
+    };
+    this.navigateToProfile = this.navigateToProfile.bind(this);
+    this.navigateToResults = this.navigateToResults.bind(this);
+  }
+
+  navigateToProfile(e) {
+    this.setState({current: 'Profile'});
+  }
+
+  navigateToResults(e) {
+    this.setState({current: 'Results'});
   }
 
   render() {
-    return (
-      <div>
-        <Header />
-        <Profile />
-        <ResultPage />
-        <Options />
-      </div>
-    );
+        {if (this.state.current === 'Profile') {
+          return <Profile navigateToResults={this.navigateToResults}/>
+        } else if (this.state.current === 'Results') {
+          return <ResultPage navigateToProfile={this.navigateToProfile}/>
+        }
+      }
   }
 }
 

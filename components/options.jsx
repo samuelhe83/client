@@ -59,8 +59,7 @@ class Options extends React.Component {
           <div> <input type="checkbox" onClick={this.handleRestrictionChange} name="vegan"/> Vegan </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="vegetarian"/> Vegetarian </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="paleolithic"/> Paleolithic </div>
-
-          <button type="submit">Search Restaurants</button>
+          <button onClick={this.props.navigateToResults} type="submit" name="restaurants">Search Restaurants</button>
         </form>
       </div>
     );
