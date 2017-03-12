@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const pageAccessToken = require('../env/index.js').pageAccessToken;
-const fbValidationToken = config.get('../env/index.js').fbValidationToken;
+const fbValidationToken = require('../env/index.js').fbValidationToken;
 
 // if you need to add conversational elements: 
 // const { Wit, log } = require('node-wit');
@@ -39,6 +39,5 @@ module.exports.handler = (event, context, callback) => {
         }
       });
     });
-
     }
 }
