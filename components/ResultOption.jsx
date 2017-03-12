@@ -18,7 +18,7 @@ class ResultOption extends React.Component {
         </div>
         <div className="RestaurantInfo">
           <div className="RestaurantSeats restaurant">
-            {this.props.value.seats}
+            {this.props.value.seats} seats available!
           </div>
         </div>
       </div>
