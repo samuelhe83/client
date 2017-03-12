@@ -5,14 +5,15 @@ class Options extends React.Component {
     super(props);
     this.state = {
       restrictions: [],
-      newRestriction: ''
+      newRestriction: '',
+      location: ''
     };
     // this.handleRestaurantSubmit = this.handleRestaurantSubmit.bind(this);
     this.handleNewRestriction = this.handleNewRestriction.bind(this);
     this.handleRestrictionChange = this.handleRestrictionChange.bind(this);
     this.handleRestrictionSubmit = this.handleRestrictionSubmit.bind(this);
     this.configSubmitter = this.configSubmitter.bind(this);
-    // console.log(this.state.restrictions);
+    this.handleLocationChange = this.handleLocationChange.bind(this);
   }
 
   handleNewRestriction(e) {
@@ -47,27 +48,43 @@ class Options extends React.Component {
   }
 
   configSubmitter (e) {
+    e.preventDefault();
     var config = {
       restrictions: this.state.restrictions,
       location: this.state.location
-    }
+    };
+
     this.props.navigateToResults(e, config);
+  }
+
+  handleLocationChange(e) {
+    e.preventDefault();
+    this.setState({location: e.target.value});
+
   }
 
   render() {
     return (
       <div>
         <div>
-          <form onSubmit={this.handleRestrictionSubmit}>
+          <form>
             <div> <input type="text" placeholder="Enter Restriction" onChange={this.handleNewRestriction}/> </div>
-            <button type="submit"> Submit</button>
           </form>
         </div>
         <form>
+<<<<<<< HEAD
+          <div>
+            <input type="text" placeholder="Location" onChange={this.handleLocationChange}/>
+            <button onClick></button>
+          </div>
+          <div><input type="checkbox" onClick={this.handleRestrictionChange} name="keto"/> Keto </div>
+=======
+          <div> <input type="text" placeholder="Location" onChange={this.handleLocationChange}/> </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="dairy-free"/> Dairy Free </div>
+>>>>>>> 2f89f2b4dce254aac368b1726c3864fc048fc86f
           <div> <input type="checkbox" onClick={this.handleRestrictionChange} name="vegan"/> Vegan </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="vegetarian"/> Vegetarian </div>
-          <div><input type="checkbox" onClick={this.handleRestrictionChange} name="paleolithic"/> Paleolithic </div>
+          <div><input type="checkbox" onClick={this.handleRestrictionChange} name="paleolithic"/> Paleo </div>
           <button onClick={this.configSubmitter} type="submit" name="restaurants">Search Restaurants</button>
         </form>
       </div>
