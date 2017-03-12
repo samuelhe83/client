@@ -1,6 +1,7 @@
 
 $black: #000;
 $white: #fff;
+$lightGrey: #f6f6f6;
 // Global
 body{
   background: #F7F7F7;
@@ -35,7 +36,8 @@ li {
   border-radius: 100%;
 }
 .profile{
-  background: url("../images/bg.jpeg");
+  background: grey;
+  // background: url("../images/bg.jpeg");
   position: relative;
 }
 .info{
@@ -51,6 +53,27 @@ li {
 }
 .points{
   font-size: 14px;
+}
+.location-wrapper{
+  input{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: url("../images/glass.png") no-repeat;
+    background-size: contain;
+    padding-left: 20px;
+    border: 1px solid $lightGrey;
+  }
+}
+
+.options{
+  display: inline-block;
+  width: 40%;
+  border: 1px solid $lightGrey;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, $lightGrey 0%, transparent 100%),
+  linear-gradient(to top, $white 0%, transparent 100%);
+  padding: 10px;
 }
 
 // restaurant list view
