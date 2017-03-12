@@ -1,7 +1,7 @@
 'use strict';
 
 const chatHandler = require('./chat/handler.js').handler;
-// const nutri = require('./api/nutriParse.js');
+const nutri = require('./api/nutriParse.js');
 
 
 module.exports.index = (event, context, callback) => {
