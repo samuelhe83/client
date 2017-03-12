@@ -11,6 +11,7 @@ class Options extends React.Component {
     this.handleNewRestriction = this.handleNewRestriction.bind(this);
     this.handleRestrictionChange = this.handleRestrictionChange.bind(this);
     this.handleRestrictionSubmit = this.handleRestrictionSubmit.bind(this);
+    this.configSubmitter = this.configSubmitter.bind(this);
     // console.log(this.state.restrictions);
   }
 
@@ -45,6 +46,14 @@ class Options extends React.Component {
     }
   }
 
+  configSubmitter (e) {
+    var config = {
+      restrictions: this.state.restrictions,
+      location: this.state.location
+    }
+    this.props.navigateToResults(e, config);
+  }
+
   render() {
     return (
       <div>
@@ -59,7 +68,7 @@ class Options extends React.Component {
           <div> <input type="checkbox" onClick={this.handleRestrictionChange} name="vegan"/> Vegan </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="vegetarian"/> Vegetarian </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="paleolithic"/> Paleolithic </div>
-          <button onClick={this.props.navigateToResults} type="submit" name="restaurants">Search Restaurants</button>
+          <button onClick={this.configSubmitter} type="submit" name="restaurants">Search Restaurants</button>
         </form>
       </div>
     );

@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import Header from './Header.jsx';
 import Profile from './Profile.jsx'
 import ResultPage from './ResultPage.jsx';
-import Profile from './Profile.jsx';
-import Options from './Options.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -20,9 +18,14 @@ class App extends React.Component {
     this.setState({current: 'Profile'});
   }
 
-  navigateToResults(e) {
+  navigateToResults(e, config) {
+    console.log(config);
+
+
     this.setState({current: 'Results'});
   }
+
+
 
   render() {
         {if (this.state.current === 'Profile') {
