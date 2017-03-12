@@ -10,7 +10,9 @@ class Options extends React.Component {
       checked: false,
       locationStr: ''
     };
+
     // this.handleNewRestriction = this.handleNewRestriction.bind(this);
+
     this.handleRestrictionChange = this.handleRestrictionChange.bind(this);
     this.handleRestrictionSubmit = this.handleRestrictionSubmit.bind(this);
     this.configSubmitter = this.configSubmitter.bind(this);
@@ -94,7 +96,7 @@ class Options extends React.Component {
       <div className="options-wrapper">
         <form onSubmit={this.configSubmitter}>
           <div className="location-wrapper">
-            <input type="text" placeholder="Location" onChange={this.handleLocationChange}/>
+            <input type="text" placeholder="Location" onChange={this.handleLocationChange} value={this.state.locationStr}/>
             <button onClick={this.getCurrentLocation}><i className="fa fa-map-marker" aria-hidden="true"></i></button>
           </div>
           <div onClick={this.handleRestrictionChange} name="keto" className="options">Keto</div>
