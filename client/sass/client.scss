@@ -2,6 +2,12 @@
 $black: #000;
 $white: #fff;
 $lightGrey: #f6f6f6;
+$red: #da3743;
+
+@mixin background(){
+  background: linear-gradient(to bottom, $white 0%, transparent 100%),
+  linear-gradient(to top, #ddd 0%, transparent 100%);
+}
 // Global
 body{
   background: #F7F7F7;
@@ -17,7 +23,8 @@ li {
     position: relative;
     background: #fff;
     text-align: center;
-    
+    margin: 0 auto;
+    width: 80%;
 }
 
 .background{
@@ -36,9 +43,11 @@ li {
   border-radius: 100%;
 }
 .profile{
-  background: grey;
-  // background: url("../images/bg.jpeg");
+  // background-color: #ddd;
+  background-image: url("../images/logo2.jpg"), url("../images/BackgroundFood.jpg");
+  background-repeat: no-repeat;
   position: relative;
+  background-size: 39%, cover;
 }
 .info{
   color: $white;
@@ -55,6 +64,7 @@ li {
   font-size: 14px;
 }
 .location-wrapper{
+  background: $white;
   input{
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -67,13 +77,14 @@ li {
 }
 
 .options{
+  @include background();
   display: inline-block;
   width: 40%;
   border: 1px solid $lightGrey;
   box-sizing: border-box;
-  background: linear-gradient(to bottom, $lightGrey 0%, transparent 100%),
-  linear-gradient(to top, $white 0%, transparent 100%);
-  padding: 10px;
+  padding: 20px 10px;
+  margin: 0 10px 20px 10px;
+  color: $red;
 }
 
 // restaurant list view
@@ -89,6 +100,8 @@ li {
 .ResultOption {
   overflow: hidden;
   margin-bottom: 10px;
+  @include background();
+  padding: 18px 0;
 }
 
 .RestaurantTags{
@@ -112,12 +125,13 @@ li {
   }
   // profile
   .profile{
-    padding: 50px 0;
+    // padding: 50px 0;
   }
   .location-wrapper {
   }
   .options-wrapper{
-    top: 100px;
+    top: 160px;
+    padding-top: 10px;
   }
   .info{
     margin-top: 0;
@@ -139,6 +153,8 @@ li {
   .RestaurantInfo {
     display: inline-block;
     width: 50%;
+    color: $red;
+    text-align: center;
   }
   .restaurant{
     padding-bottom: 5px;
@@ -152,6 +168,7 @@ li {
 @media all and (max-width: 480px) {
   .location-wrapper {
     position: relative;
-    bottom: 20px;
+    // bottom: 20px;
+    margin-bottom: 20px;
   }
 }

@@ -10,7 +10,7 @@ class Options extends React.Component {
       checked: false,
       locationStr: ''
     };
-    this.handleNewRestriction = this.handleNewRestriction.bind(this);
+    // this.handleNewRestriction = this.handleNewRestriction.bind(this);
     this.handleRestrictionChange = this.handleRestrictionChange.bind(this);
     this.handleRestrictionSubmit = this.handleRestrictionSubmit.bind(this);
     this.configSubmitter = this.configSubmitter.bind(this);
