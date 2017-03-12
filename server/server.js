@@ -47,7 +47,23 @@ app.get('/', (req, res) => {
 
 app.get('/test', (req, res) => {
   const response = {
-    message: 'Hello!'
+    "items": [
+               {
+                 "title": "Emerald Curry",
+                 "description": "prawns, scallops, basil, green beans, bell pepper and young coconut in spicy green curry",
+                 "price": "20.00"
+               },
+               {
+                 "title": "Madame Sea Bass",
+                 "description": "simmered in green curry with green beans, bell pepper, fresh basil and eggplant",
+                 "price": "19.00"
+               },
+               {
+                 "title": "Panang Salmon",
+                 "description": "grilled salmon with broccoli, topped with white sesame seeds and Panang curry sauce",
+                 "price": "16.00"
+               }
+    ]
   }
   res.status(200).send(response);
 });
