@@ -116,7 +116,7 @@ li {
 }
 /* line 107, ../sass/client.scss */
 .options.active {
-  background: #da3743;
+  background-color: #da3743;
   color: white;
   border-color: #da3743;
 }
