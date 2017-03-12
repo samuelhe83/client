@@ -72,11 +72,16 @@ class Options extends React.Component {
           </form>
         </div>
         <form>
+<<<<<<< HEAD
           <div>
             <input type="text" placeholder="Location" onChange={this.handleLocationChange}/>
             <button onClick></button>
           </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="keto"/> Keto </div>
+=======
+          <div> <input type="text" placeholder="Location" onChange={this.handleLocationChange}/> </div>
+          <div><input type="checkbox" onClick={this.handleRestrictionChange} name="dairy-free"/> Dairy Free </div>
+>>>>>>> 2f89f2b4dce254aac368b1726c3864fc048fc86f
           <div> <input type="checkbox" onClick={this.handleRestrictionChange} name="vegan"/> Vegan </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="vegetarian"/> Vegetarian </div>
           <div><input type="checkbox" onClick={this.handleRestrictionChange} name="paleolithic"/> Paleo </div>
