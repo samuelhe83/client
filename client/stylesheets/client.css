@@ -12,7 +12,7 @@ li {
 }
 
 /* line 15, ../sass/client.scss */
-.wrapper {
+.options-wrapper {
   position: relative;
   background: #fff;
   text-align: center;
@@ -103,7 +103,7 @@ li {
   }
 
   /* line 96, ../sass/client.scss */
-  .wrapper {
+  .options-wrapper {
     top: 100px;
   }
 
@@ -143,5 +143,12 @@ li {
   /* line 123, ../sass/client.scss */
   .restaurant.RestaurantName {
     font-size: 16px;
+  }
+}
+@media all and (max-width: 480px) {
+  /* line 130, ../sass/client.scss */
+  .location-wrapper {
+    position: relative;
+    bottom: 20px;
   }
 }

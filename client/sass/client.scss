@@ -12,7 +12,7 @@ li {
     font-style: italic;
 }
 // profile
-.wrapper {
+.options-wrapper {
     position: relative;
     background: #fff;
     text-align: center;
@@ -93,7 +93,7 @@ li {
   }
   .location-wrapper {
   }
-  .wrapper{
+  .options-wrapper{
     top: 100px;
   }
   .info{
@@ -127,4 +127,8 @@ li {
 
 }
 @media all and (max-width: 480px) {
+  .location-wrapper {
+    position: relative;
+    bottom: 20px;
+  }
 }

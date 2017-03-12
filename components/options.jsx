@@ -98,7 +98,7 @@ class Options extends React.Component {
         <form onSubmit={this.configSubmitter}>
           <div className="location-wrapper">
             <input type="text" placeholder="Location" onChange={this.handleLocationChange}/>
-            <button onClick={this.getCurrentLocation}>Set Current Location</button>
+            <button onClick={this.getCurrentLocation}><i className="fa fa-map-marker" aria-hidden="true"></i></button>
           </div>
           <div onClick={this.handleRestrictionChange} name="keto" className="options">Keto</div>
           <div onClick={this.handleRestrictionChange} name="vegan" className="options">Vegan</div>
