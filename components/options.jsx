@@ -6,7 +6,8 @@ class Options extends React.Component {
     this.state = {
       restrictions: [],
       newRestriction: '',
-      location: ''
+      location: '',
+      checked: false
     };
     // this.handleRestaurantSubmit = this.handleRestaurantSubmit.bind(this);
     this.handleNewRestriction = this.handleNewRestriction.bind(this);
@@ -37,14 +38,18 @@ class Options extends React.Component {
   handleRestrictionChange(e) {
     var currentRestrictions = this.state.restrictions.slice();
     console.log('currentRestrictions');
-    if (e.target.checked) {
+    if (e.target.className === "options") {
+      this.state.checked = true;
       currentRestrictions.push(e.target.name);
       this.setState({restrictions: currentRestrictions});
+      e.target.className = "options active";
 
     } else {
       var index = currentRestrictions.indexOf(e.target.name);
       currentRestrictions.splice(index, 1);
       this.setState({restrictions: currentRestrictions});
+      e.target.className = "options";
+      
     }
   }
 
@@ -95,12 +100,11 @@ class Options extends React.Component {
             <input type="text" placeholder="Location" onChange={this.handleLocationChange}/>
             <button onClick={this.getCurrentLocation}>Set Current Location</button>
           </div>
-          <div onClick={this.handleRestrictionChange} name="keto" className="options"> Keto </div>
-          <div onClick={this.handleRestrictionChange} name="vegan"> Vegan </div>
-          <div onClick={this.handleRestrictionChange} name="vegetarian"> Vegetarian </div>
-          <div onClick={this.handleRestrictionChange} name="paleolithic"> Paleo </div>
+          <div onClick={this.handleRestrictionChange} name="keto" className="options">Keto</div>
+          <div onClick={this.handleRestrictionChange} name="vegan" className="options">Vegan</div>
+          <div onClick={this.handleRestrictionChange} name="vegetarian" className="options">Vegetarian</div>
+          <div onClick={this.handleRestrictionChange} name="paleolithic" className="options">Paleo</div>
           <button type="submit" name="restaurants">Search</button>
-
         </form>
       </div>
     );
