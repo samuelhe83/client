@@ -92,7 +92,7 @@ app.get('/api/restaurants', (req, res) => {
     },
   ];
   console.log(restaurants);
-  res.status(200).send(restaurants);
+  res.send(restaurants);
   //get the parameters from req
     //Restrictions -- send to kai
     //location --
