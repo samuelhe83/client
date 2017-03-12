@@ -97,10 +97,12 @@ class Options extends React.Component {
             <input type="text" placeholder="Location" onChange={this.handleLocationChange}/>
             <button onClick={this.getCurrentLocation}><i className="fa fa-map-marker" aria-hidden="true"></i></button>
           </div>
-          <div onClick={this.handleRestrictionChange} name="keto" className="options">Keto</div>
-          <div onClick={this.handleRestrictionChange} name="vegan" className="options">Vegan</div>
-          <div onClick={this.handleRestrictionChange} name="vegetarian" className="options">Vegetarian</div>
-          <div onClick={this.handleRestrictionChange} name="paleolithic" className="options">Paleo</div>
+          <div className="boxes">
+            <div onClick={this.handleRestrictionChange} name="keto" className="options">Keto</div>
+            <div onClick={this.handleRestrictionChange} name="vegan" className="options">Vegan</div>
+            <div onClick={this.handleRestrictionChange} name="vegetarian" className="options">Vegetarian</div>
+            <div onClick={this.handleRestrictionChange} name="paleolithic" className="options">Paleo</div>
+          </div>
 
           <button type="submit" name="restaurants">Search</button>
         </form>
