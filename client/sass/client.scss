@@ -105,7 +105,7 @@ li {
   color: $red;
   // hightlight
   &.active{
-    background-color: $red;
+    background: $red;
     color: $white;
     border-color: $red;
   }
