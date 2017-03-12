@@ -21,7 +21,7 @@ functions:
           path: webhook
           method: POST
           integration: lambda
-  cron:
-    handler: handler.run
-    events:
-      - schedule: rate(1 minute)
+  # cron:
+  #   handler: handler.run
+  #   events:
+  #     - schedule: rate(1 minute)
