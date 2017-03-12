@@ -8,6 +8,17 @@ $red: #da3743;
   background: linear-gradient(to bottom, $white 0%, transparent 100%),
   linear-gradient(to top, #ddd 0%, transparent 100%);
 }
+.CurrentFilterBar{
+  background-image: url("../images/logo2.png");
+  background-repeat: no-repeat;
+  padding-top: 35px;
+  button{
+    background: $red;
+    color: $white;
+    border: 1px solid $red;
+    margin-right: 10px;
+  }
+}
 button[type="submit"]{
   background: $red;
   color: $white;
@@ -125,7 +136,9 @@ li {
   overflow: hidden;
   margin-bottom: 10px;
   @include background();
-  padding: 18px 0;
+  &:first-child{
+    margin-top: 10px;
+  }
 }
 
 .RestaurantTags{
@@ -171,14 +184,17 @@ li {
   padding-right: 5px;
     img{
       display: inline-block;
-      width: 150px;
+      width: 100px;
     }
   }
   .RestaurantInfo {
     display: inline-block;
     width: 50%;
     color: $red;
-    text-align: center;
+    // text-align: center;
+  }
+  .RestaurantName{
+    margin-top: 10px;
   }
   .restaurant{
     padding-bottom: 5px;
