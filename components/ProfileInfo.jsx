@@ -11,6 +11,10 @@ class ProfileInfo extends React.Component {
     return (
       <div className="info">
         <div className="name">Cindy Cheung</div>
+<<<<<<< HEAD
+=======
+        <div className="points">Points</div>
+>>>>>>> profile componenets and styling setup
         <div className="points">Your points: 10000000000 PTS</div>
       </div>
     );
