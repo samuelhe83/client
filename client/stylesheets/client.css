@@ -1,6 +1,6 @@
 /* line 11, ../sass/client.scss */
 .CurrentFilterBar {
-  background-image: url("images/logo2.png");
+  background-image: url("../images/logo2.png");
   background-repeat: no-repeat;
   padding-top: 35px;
 }
