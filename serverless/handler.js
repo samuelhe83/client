@@ -18,9 +18,9 @@ module.exports.index = (event, context, callback) => {
   callback(null, response);
 };
 
-module.exports.webhook = (event, context, callback) =>
-  chatHandler(event, context, callback)
-
+module.exports.webhook = (event, context, callback) => {
+    return chatHandler(event, context, callback);
+  }
 
 module.exports.run = (event, context) => {
   const time = new Date();

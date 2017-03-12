@@ -1,7 +1,7 @@
-const config = require('config');
-const pageAccessToken = config.get('pageAccessToken');
-const validationToken = config.get('validationToken');
 const axios = require('axios');
+
+const pageAccessToken = require('../env/index.js').pageAccessToken;
+const fbValidationToken = config.get('../env/index.js').fbValidationToken;
 
 // if you need to add conversational elements: 
 // const { Wit, log } = require('node-wit');
@@ -14,7 +14,7 @@ const axios = require('axios');
 
 module.exports.handler = (event, context, callback) => {
   if (event.method === 'GET') {
-      if (event.query['hub.verify_token'] === validationToken && event.query['hub.challenge']) {
+      if (event.query['hub.verify_token'] === fbValidationToken && event.query['hub.challenge']) {
         return callback(null, parseInt(event.query['hub.challenge']));
       } else {
         return callback('Invalid token');
