@@ -10,4 +10,8 @@ node_modules/
 .serverless/
 *.DS_Store
 *.zip
+<<<<<<< HEAD
 >>>>>>> Add gitignore
+=======
+config/
+>>>>>>> Set up dynamodb
