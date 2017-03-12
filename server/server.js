@@ -39,6 +39,7 @@ app.use(bodyParser.json());
 
 app.use(express.static('client'));
 
+
 app.get('/bundle.js', function(req, res) {
   res.sendFile(path.resolve(__dirname, '../client/bundle.js'));
 });
@@ -52,7 +53,7 @@ app.get('/api/restaurants', (req, res) => {
   var restaurants = [
     {
       name: 'Town',
-      seats: 12
+      seats: 12,
     },
     {
       name: 'Madera - Rosewood',
@@ -91,7 +92,6 @@ app.get('/api/restaurants', (req, res) => {
       seats: 11
     },
   ];
-  console.log(restaurants);
   res.send(restaurants);
   //get the parameters from req
     //Restrictions -- send to kai

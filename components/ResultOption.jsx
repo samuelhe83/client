@@ -9,7 +9,7 @@ class ResultOption extends React.Component {
     return (
       <div className="ResultOption">
         <div className="RestaurantAvatar">
-          <img src={this.props.restaurant.image}></img>
+          <img src={this.props.value.image}></img>
         </div>
         <div className="RestaurantInfo">
           <div className="RestaurantName restaurant">
