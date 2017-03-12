@@ -12,8 +12,10 @@ class Profile extends React.Component {
   render() {
     return (
       <div className="profile">
-        <ProfilePic/>
-        <ProfileInfo/>
+        <div className="background">
+          <ProfilePic/>
+          <ProfileInfo/>
+        </div>
       </div>
     );
   }

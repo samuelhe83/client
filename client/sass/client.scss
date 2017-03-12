@@ -1,18 +1,82 @@
+$black: #000;
+$white: #fff;
+// Global
 body{
   background: #F7F7F7;
+  margin: 0;
+  font-family: source-sans-pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+li {
+    list-style-type: none;
+    font-style: italic;
+}
+// profile
+.background{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .pic{
-  width: 30%;
-  max-height: 113px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
 }
-
+.profile{
+  background: url("../images/bg.jpeg");
+  position: relative; 
+  padding: 100px 0;
+}
 .info{
-  float: right;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
-  box-shadow: 0 1px 0 rgba(0,0,0,.1);
-  background: #fff;
-  margin-bottom: 2rem;
+  color: $white;
+}
+#header{
+  padding: 10px 0;
+  img{
+    width: 40%;
+  }
+}
+.name{
+  font-size: 34px;
+}
+.points{
+  font-size: 14px;
+}
+
+// restaurant result page
+.ResultOption{
+  overflow: hidden;
+}
+.RestaurantAvatar{
+  float: left;
+  width: 50%;
+  img{
+    display: inline-block;
+    width: 150px;
+  }
+}
+.RestaurantInfo {
+  display: inline-block;
+  width: 50%;
+}
+.restaurant{
+  padding-bottom: 5px;
+  font-size: 14px;
+  &.RestaurantName{
+    font-size: 16px;
+  }
+}
+.RestaurantTags{
+  li{
+    display: inline-block;
+    border-radius: 100%;
+    border: 1px solid;
+    font-size: 13px;
+    padding: 3px;
+    margin-right: 5px;
+  }
 }
