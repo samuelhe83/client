@@ -10,33 +10,24 @@ class App extends React.Component {
     super(props);
     this.state = {
       current: 'Profile',
-      restaurants: []
+      restaurants: [],
+      restrictions: []
     };
     this.navigateToProfile = this.navigateToProfile.bind(this);
     this.navigateToResults = this.navigateToResults.bind(this);
   }
 
-  componentDidMount() {
-    axios.get('/api/restaurants')
-    .then(function(restaurantObj) {
-      this.setState({restaurants: restaurantObj});
-    })
-    .catch(function(err) {
-      if (err) {
-        console.log(err);
-      }
-    });
-  }
+
 
   navigateToProfile(e) {
     this.setState({current: 'Profile'});
   }
 
   navigateToResults(e, config) {
-    console.log(config);
+    console.log(config, 'in config');
 
 
-    this.setState({current: 'Results'});
+    this.setState({current: 'Results', restrictions: config.restrictions});
   }
 
 
@@ -45,7 +36,7 @@ class App extends React.Component {
         {if (this.state.current === 'Profile') {
           return <Profile navigateToResults={this.navigateToResults}/>
         } else if (this.state.current === 'Results') {
-          return <ResultPage navigateToProfile={this.navigateToProfile} restaurants={this.state.restaurants}/>
+          return <ResultPage navigateToProfile={this.navigateToProfile} restrictions={this.state.restrictions}/>
         }
       }
   }

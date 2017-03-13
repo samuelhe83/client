@@ -24,11 +24,10 @@ class ResultPage extends React.Component {
   // }
 
   render() {
-    console.log(this.state.restaurants);
     return (
       <div>
         <CurrentFilterBar navigateToProfile={this.props.navigateToProfile}/>
-        <ResultContainer restaurants={this.state.restaurants}/>
+        <ResultContainer restaurants={this.state.restaurants} restrictions={this.props.restrictions}/>
       </div>
     )
   }

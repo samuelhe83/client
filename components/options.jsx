@@ -35,12 +35,12 @@ class Options extends React.Component {
     console.log('currentRestrictions');
     if (e.target.className === "options") {
       this.state.checked = true;
-      currentRestrictions.push(e.target.name);
+      currentRestrictions.push(e.target.id);
       this.setState({restrictions: currentRestrictions});
       e.target.className = "options active";
 
     } else {
-      var index = currentRestrictions.indexOf(e.target.name);
+      var index = currentRestrictions.indexOf(e.target.id);
       currentRestrictions.splice(index, 1);
       this.setState({restrictions: currentRestrictions});
       e.target.className = "options";
@@ -91,7 +91,6 @@ class Options extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="options-wrapper">
         <form onSubmit={this.configSubmitter}>
@@ -99,12 +98,12 @@ class Options extends React.Component {
             <input type="text" placeholder="Location" onChange={this.handleLocationChange} value={this.state.locationStr}/>
             <button onClick={this.getCurrentLocation}><i className="fa fa-map-marker" aria-hidden="true"></i></button>
           </div>
-          
-            <div onClick={this.handleRestrictionChange} name="keto" className="options">Keto</div>
-            <div onClick={this.handleRestrictionChange} name="vegan" className="options">Vegan</div>
-            <div onClick={this.handleRestrictionChange} name="vegetarian" className="options">Vegetarian</div>
-            <div onClick={this.handleRestrictionChange} name="paleolithic" className="options">Paleo</div>
-          
+
+            <div onClick={this.handleRestrictionChange} id="keto" className="options">Keto</div>
+            <div onClick={this.handleRestrictionChange} id="vegan" className="options">Vegan</div>
+            <div onClick={this.handleRestrictionChange} id="vegetarian" className="options">Vegetarian</div>
+            <div onClick={this.handleRestrictionChange} id="paleolithic" className="options">Paleo</div>
+
 
           <button type="submit" name="restaurants">Search</button>
         </form>
